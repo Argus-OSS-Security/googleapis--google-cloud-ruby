@@ -3,16 +3,17 @@ name: Tombstone a Library
 permissions:
   contents: read
 
-on:
-  workflow_dispatch:
-    inputs:
-      gem:
-        description: "gem name to tombstone"
-        required: true
-      flags:
-        description: "Extra flags to pass to toys tombstone-library"
-        required: false
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       gem:
+#         description: "gem name to tombstone"
+#         required: true
+#       flags:
+#         description: "Extra flags to pass to toys tombstone-library"
+#         required: false
+# 
 jobs:
   TombstoneLibrary:
     if: ${{ github.repository == 'googleapis/google-cloud-ruby' }}

@@ -1,15 +1,16 @@
 name: Update Pull Request
 
-on:
-  workflow_dispatch:
-    inputs:
-      pr:
-        description: "Pull request number"
-        required: true
-      options:
-        description: "Options"
-        required: false
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       pr:
+#         description: "Pull request number"
+#         required: true
+#       options:
+#         description: "Options"
+#         required: false
+# 
 jobs:
   UpdatePR:
     if: ${{ github.repository == 'googleapis/google-cloud-ruby' }}

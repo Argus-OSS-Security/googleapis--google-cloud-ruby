@@ -1,13 +1,14 @@
 name: Release-Please Now
-on:
-  schedule:
-    - cron: '21 10 * * 1-4'
-  workflow_dispatch:
-    inputs:
-      args:
-        description: "Extra command line arguments."
-        required: false
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   schedule:
+#     - cron: '21 10 * * 1-4'
+#   workflow_dispatch:
+#     inputs:
+#       args:
+#         description: "Extra command line arguments."
+#         required: false
+# 
 jobs:
   add-release-please-label:
     if: ${{ github.repository == 'googleapis/google-cloud-ruby' }}

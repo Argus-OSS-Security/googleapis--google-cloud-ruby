@@ -3,13 +3,14 @@ name: Create New Library
 permissions:
   contents: read
 
-on:
-  workflow_dispatch:
-    inputs:
-      protoPaths:
-        description: "The path to the protos and build file. Can specify multiple space-separated paths."
-        required: true
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       protoPaths:
+#         description: "The path to the protos and build file. Can specify multiple space-separated paths."
+#         required: true
+# 
 jobs:
   NewLibrary:
     if: ${{ github.repository == 'googleapis/google-cloud-ruby' }}

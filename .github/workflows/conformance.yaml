@@ -4,15 +4,16 @@
 permissions:
   contents: read
 
-on:
-  push:
-    branches:
-    - main
-    paths:
-      - 'google-cloud-bigtable/**'
-  pull_request:
-    paths:
-      - 'google-cloud-bigtable/**'
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches:
+#     - main
+#     paths:
+#       - 'google-cloud-bigtable/**'
+#   pull_request:
+#     paths:
+#       - 'google-cloud-bigtable/**'
 name: conformance
 jobs:
   bigtable_conformance:
